@@ -102,8 +102,8 @@ cat >> ~/.zshrc <<-EOF
 	   . ~/.profile
 	fi
 	export LC_CTYPE=en_US.UTF-8
-	ZSH_THEME="agnoster"
 EOF
+sed -i 's/^ZSH_THEME="[^"]*"$/ZSH_THEME="agnoster"/' ~/.zshrc
 
 # Copy over dotfiles from this repo
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
